@@ -1,4 +1,3 @@
-function helloWorld(){
-    console.log("Hello World!");
-}
-helloWorld();
+var fs =  require('fs');
+
+fs.writeFileSync('message.txt', 'Hello Node.js')
