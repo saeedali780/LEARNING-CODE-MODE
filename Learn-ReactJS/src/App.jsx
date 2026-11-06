@@ -1,19 +1,19 @@
 import {useState} from 'react'
-import User from './components/User.jsx'
 
 const App = () => {
-  let [display, setDisplay] = useState(false);
+  const [count, setCount] = useState(0)
   return (
-    <>
-    <h1>Toggle in ReactJs</h1>
-    <button onClick={() => setDisplay(!display)}>Toggle</button>
-    {
-      // display ?  <h1>Saeed Ali</h1> :null
-
-      display ?  <User/> :null
-    }
-  
-    </>
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+     {
+      count=== 0 
+      ? <h1>Count is Zero</h1>
+      :count===1 ? <h1>Count is One</h1> 
+      :count===2 ? <h1>Count is Two</h1>
+      : <h1>Count is {count}</h1>
+     }
+    </div>
   )
 }
 
