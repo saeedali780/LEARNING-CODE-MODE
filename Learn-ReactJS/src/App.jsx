@@ -1,20 +1,16 @@
-import Hello from './components/Hello'
-import {useState} from 'react';
-const App = () => {
+import {useState} from 'react'
 
-  let [fruit, setFruit] = useState("Apple");
-  let [count, setCount] = useState(0);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setFruit("Banana");
-    setCount(count++);
-  }
+const App = () => {
+  let [display, setDisplay] = useState(false);
   return (
-    <div>
-      <h1>My Favorite Fruit is {fruit}</h1>
-      <button onClick={handleClick}>Click Me</button>
-      <Hello />
-    </div>
+    <>
+    <h1>Toggle in ReactJs</h1>
+    <button onClick={() => setDisplay(!display)}>Toggle</button>
+    {
+      display ?  <h1>Saeed Ali</h1> :null
+    }
+  
+    </>
   )
 }
 
