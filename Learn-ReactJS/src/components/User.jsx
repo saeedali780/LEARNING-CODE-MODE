@@ -1,4 +1,4 @@
-const User = ({ name, age }) => {
+const User = ({ name = "Anonymous", age }) => {
   return (
     <div>
         
