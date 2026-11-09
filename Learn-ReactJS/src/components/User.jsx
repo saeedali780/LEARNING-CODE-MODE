@@ -1,9 +1,28 @@
-const User = ({ name = "Anonymous", age }) => {
+import { useState } from 'react';
+
+const User = () => {
+  let [name, setName] = useState("");
+  let [age, setAge] = useState(0);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    if (name === "name") {
+      setName(value);
+    } else if (name === "age") {
+      setAge(value);
+    }
+  }
   return (
     <div>
-        
-        <h1>{name}</h1>
-        <p>Age: {age}</p>
+      <label htmlFor="name">Name:</label>
+      <input type="text" id="name" name="name" onChange={handleInputChange} />
+      <h1>{name}</h1>
+      <br /><br /><br />
+      <label htmlFor="age">Age:</label>
+      <input type="number" id="age" name="age" onChange={handleInputChange} />
+       <h1>{age}</h1>
+
+       <button onClick={() => { setName(""); setAge(0); }}>Reset</button>
     </div>
   )
 }
