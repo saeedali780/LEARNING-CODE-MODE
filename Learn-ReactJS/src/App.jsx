@@ -20,7 +20,7 @@ const App = () => {
         <input type="email" placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} />
         <br/><br/>
         <button type='submit'>Submit</button>
-
+        <button type='reset' onClick={() => { setName(''); setPassword(''); setEmail('') }}>Reset</button>
         <h2>{name}</h2>
         <h2>{password}</h2>
         <h2>{email}</h2>
