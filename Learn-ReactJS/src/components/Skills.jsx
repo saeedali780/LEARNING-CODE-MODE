@@ -1,6 +1,6 @@
 import {useState} from 'react'
 const Skills = () => {
-  const [gender, setGender] = useState('');
+  const [gender, setGender] = useState('Female');
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleOptionChange = (e) => {
