@@ -1,24 +1,19 @@
-// import Skills from './components/Skills'
+import User from './components/User.jsx'
 const App = () => {
   const users = [
-    {id: 1, name: 'John', age: 30},
-    {id: 2, name: 'Jane', age: 25},
-    {id: 3, name: 'Bob', age: 35},
+    {id: 1, name: 'John', age: 30 , email: 'john@example.com'},
+    {id: 2, name: 'Jane', age: 25, email: 'jane@example.com'},
+    {id: 3, name: 'Bob', age: 35, email: 'bob@example.com'},
   ]
   return (
     <div>
-      <h1>Loops in ReactJS</h1>
+      <h1>User List</h1>
+
       {users.map(user => (
         <div key={user.id}>
-          {user.age > 30 ? (
-            <h2>{user.id + '. ' + user.name} is older than 30</h2>
-          ) : (
-            <h2>{user.id + '. ' + user.name} is younger than or equal to 30</h2>
-          )}
-     
+          <User user={user} />
         </div>
       ))}
-      {/* <Skills /> */}
     </div>
   )
 }
