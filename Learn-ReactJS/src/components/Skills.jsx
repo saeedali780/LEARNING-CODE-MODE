@@ -1,30 +1,39 @@
-import { useState } from 'react'
-
+import {useState} from 'react'
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
+  const [gender, setGender] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
 
-  const handleCheckboxChange = (event) => {
-    const { value, checked } = event.target;
-    if (checked) {
-      setSkills([...skills, value]);
-    } else {
-      setSkills(skills.filter((skill) => skill !== value));
-    }
-  };
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
+  }
+
+  const handleChange = (e) => {
+    setGender(e.target.value);
+  }
   return (
-    <div>
-        <h3>Select your skills</h3>   
-        <input type="checkbox" id="html" name="html" value="HTML" onChange={handleCheckboxChange} />
-        <label htmlFor="html">HTML</label>
-        <br />
-        <input type="checkbox" id="css" name="css" value="CSS" onChange={handleCheckboxChange} />
-        <label htmlFor="css">CSS</label>
-        <br />
-        <input type="checkbox" id="js" name="js" value="JavaScript" onChange={handleCheckboxChange} />
-        <label htmlFor="js">JavaScript</label>
-        <br />
 
-        <h2>Selected Skills: {skills.join(', ')}</h2>
+    <div>
+      <h2> Drop down and radio</h2>
+      <br/>
+      <h3>Handle Radio Buttons</h3>
+
+      <input type="radio" name="gender" value="Male" id="male" checked={gender === 'Male'} onChange={handleChange} />
+      <label htmlFor="male">Male</label>
+
+      <input type="radio" name="gender" value="Female" id="female" checked={gender === 'Female'} onChange={handleChange} />
+      <label htmlFor="female">Female</label>
+      <br/><br/>
+
+      <h1>{gender || 'No gender selected'}</h1>
+
+      <br/>
+      <h3>Handle Drop Down</h3>
+      <select value={selectedOption} onChange={handleOptionChange}>
+        <option value="">Select Skill</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+      </select>
+      <h1>{selectedOption || 'No skill selected'}</h1>
     </div>
   )
 }
