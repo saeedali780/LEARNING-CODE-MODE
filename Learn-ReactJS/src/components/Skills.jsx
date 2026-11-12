@@ -13,7 +13,7 @@ const Skills = () => {
   };
   return (
     <div>
-        <h3>Select your skills</h3>
+        <h3>Select your skills</h3>   
         <input type="checkbox" id="html" name="html" value="HTML" onChange={handleCheckboxChange} />
         <label htmlFor="html">HTML</label>
         <br />
