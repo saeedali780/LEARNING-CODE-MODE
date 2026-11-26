@@ -10,7 +10,7 @@ public class Main {
         // 1. Declaration
         // 2. Assignment
 
-        int x;
+        int x = 10;
         System.out.println(x);
 
     }
