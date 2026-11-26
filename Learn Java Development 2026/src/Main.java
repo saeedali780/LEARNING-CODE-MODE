@@ -11,7 +11,7 @@ public class Main {
         // 2. Assignment
 
         int x = 10;
-        System.out.println(x);
-
+        int year = 2026;
+        System.out.println( "The year is: " + year);
     }
 }
