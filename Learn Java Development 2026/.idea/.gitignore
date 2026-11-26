@@ -3,6 +3,10 @@
 /workspace.xml
 # Markdown personal settings
 /markdown.xml
+misc.xml
+modules.xml
+workspace.xml
+vcs.xml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Ignored default folder with query files
