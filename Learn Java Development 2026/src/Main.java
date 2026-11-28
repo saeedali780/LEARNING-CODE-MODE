@@ -1,26 +1,38 @@
-import  java.util.Scanner;
 public class Main {
     public static void  main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your Name: ");
-        String input  = scanner.nextLine();
-        System.out.println("The output is "+ input);
+//        System.out.println("Hello Java!");
+//        System.out.println("Hey!");
 
-        System.out.println("Enter an Integer: ");
-        int inputNum =  scanner.nextInt();
-        System.out.println("User has entered  this num : " + inputNum);
+        // === VARIABLES ===
 
-        System.out.print("Enter Gpa: ");
-        Double gpa = scanner.nextDouble();
-        System.out.println(gpa);
-        System.out.print("Are you student? (true/false): ");
-        boolean isStudent = scanner.nextBoolean();
+        // 2 Steps to create a variable
+        //-----------------------------
+        // 1. Declaration
+        // 2. Assignment
 
-        System.out.println(isStudent);
+        int x = 10;
+        int year = 2026;
+        int quantity = 1;
+        int age = 23;
 
+        double price = 19.23;
+        double gap = 2.3;
+        double temprature = 23.2;
 
+        char grade = 'A';
+        char symbol = '!';
+        char currency = '$';
 
+        boolean isStudent = true;
+        boolean forSale = false;
+        boolean isOnline = true;
 
-        scanner.close();
+        String name = "Saeed";
+        String food = "Pizza";
+        String email = "hello@tes.com";
+        String color = "red";
+
+        System.out.println(grade);
+        System.out.println("Hello "  + name + " Your Fav Food is " + food);
     }
 }
