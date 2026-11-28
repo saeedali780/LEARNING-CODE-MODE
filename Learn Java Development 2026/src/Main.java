@@ -1,38 +1,26 @@
+import java.util.Scanner;
 public class Main {
     public static void  main(String[] args){
-//        System.out.println("Hello Java!");
-//        System.out.println("Hey!");
 
-        // === VARIABLES ===
+  // Calculate Area
 
-        // 2 Steps to create a variable
-        //-----------------------------
-        // 1. Declaration
-        // 2. Assignment
+        double width = 0;
+        double height = 0;
+        double area = 0;
 
-        int x = 10;
-        int year = 2026;
-        int quantity = 1;
-        int age = 23;
+        Scanner scanner = new Scanner(System.in);
 
-        double price = 19.23;
-        double gap = 2.3;
-        double temprature = 23.2;
+        System.out.print("Enter Width: ");
 
-        char grade = 'A';
-        char symbol = '!';
-        char currency = '$';
+        width = scanner.nextDouble();
 
-        boolean isStudent = true;
-        boolean forSale = false;
-        boolean isOnline = true;
+        System.out.print("Enter Height: ");
 
-        String name = "Saeed";
-        String food = "Pizza";
-        String email = "hello@tes.com";
-        String color = "red";
+        height = scanner.nextDouble();
 
-        System.out.println(grade);
-        System.out.println("Hello "  + name + " Your Fav Food is " + food);
+        area = width * height;
+
+        System.out.println("The Area is: " + area + "cm²");
+
     }
 }
